@@ -28,6 +28,17 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
+# Elasticsearch integration
+gem "elasticsearch-model"
+gem "elasticsearch-rails"
+
+# Authentication and authorization
+gem "devise"
+
+# Admin dashboard
+gem "activeadmin"
+gem "sassc-rails"  # Required for ActiveAdmin
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -49,6 +60,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  
+  # Testing framework
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -60,4 +75,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  
+  # Database cleaner for testing
+  gem "database_cleaner-active_record"
 end
